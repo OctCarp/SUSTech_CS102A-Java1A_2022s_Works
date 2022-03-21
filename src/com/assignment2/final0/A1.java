@@ -1,4 +1,4 @@
-package com.assignment2.demos;
+package com.assignment2.final0;
 
 import java.util.Scanner;
 
@@ -35,3 +35,4 @@ public class A1 {
         return sum;
     }
 }
+
