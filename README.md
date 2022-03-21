@@ -1,2 +1,2 @@
 # cs102a
-Assignments of CS102A 2022 Spring
+The code I submitted for my exercise and assignments of CS102A 2022 Spring
