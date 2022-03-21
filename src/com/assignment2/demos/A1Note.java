@@ -14,7 +14,7 @@ public class A1Note {
         double upper = input.nextDouble();//输入积分上界
         changeCoefficient(coefficient);//调用方法改变积分后的系数
         double sum=substitute(upper,lower,coefficient);//通过代入方法，用上下限和系数数组作参数计算
-        System.out.println(sum);
+        System.out.printf("%.7f",sum);
     }
 
     public static void changeCoefficient(double[] arr) {

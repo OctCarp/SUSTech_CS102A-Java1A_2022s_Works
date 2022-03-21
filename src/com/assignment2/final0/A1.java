@@ -14,7 +14,7 @@ public class A1 {
         double upper = input.nextDouble();
         changeCoefficient(coefficient);
         double sum=substitute(upper,lower,coefficient);
-        System.out.println(sum);
+        System.out.printf("%.7f",sum);
     }
 
     public static void changeCoefficient(double[] arr) {
