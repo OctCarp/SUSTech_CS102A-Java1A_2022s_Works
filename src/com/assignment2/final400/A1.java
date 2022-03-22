@@ -1,4 +1,4 @@
-package com.assignment2.final200;
+package com.assignment2.final400;
 
 import java.util.Scanner;
 
