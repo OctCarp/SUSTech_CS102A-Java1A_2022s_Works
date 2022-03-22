@@ -6,14 +6,14 @@ public class E3 {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
         int n = input.nextInt();
-        int[] threeTerms = {0, 1, 1};
+        int[] termsThree = {0, 1, 1};
         for (int i = 0; i < n; i++) {
-            int b = threeTerms[1];
-            int c = threeTerms[2];
-            threeTerms[2] = b + c;
-            threeTerms[1] = c;
-            threeTerms[0] = b;
+            int b = termsThree[1];
+            int c = termsThree[2];
+            termsThree[2] = b + c;
+            termsThree[1] = c;
+            termsThree[0] = b;
         }
-        System.out.println(threeTerms[0]);
+        System.out.println(termsThree[0]);
     }
 }
