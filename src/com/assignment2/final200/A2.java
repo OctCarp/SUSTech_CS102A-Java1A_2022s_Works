@@ -1,4 +1,4 @@
-package com.assignment2.demos;
+package com.assignment2.final200;
 
 import java.util.Scanner;
 
@@ -22,10 +22,6 @@ public class A2 {
         String[] everyChess = chessLine.split(" ");
         boolean legal = true;
         int[][] aBoard = new int[8][8];
-        for (int i = 0; i < 8; i++) {
-            for (int j = 0; j < 8; j++)
-                aBoard[i][j] = 0;
-        }
         for (int i = 0; i < 8; i++) {
             String nextChess = everyChess[i];
             legal = putChess(nextChess, aBoard);
