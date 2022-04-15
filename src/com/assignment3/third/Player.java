@@ -96,7 +96,7 @@ public class Player {
 }
 
 class Mail {
-    private String mail;
+    String mail;
 
     public Mail(String mail) {
         this.mail = mail;
@@ -108,7 +108,7 @@ class Mail {
 }
 
 class PhoneNumber {
-    private String phoneNumber;
+    String phoneNumber;
 
     public PhoneNumber(String phoneNumber) {
         this.phoneNumber = phoneNumber;

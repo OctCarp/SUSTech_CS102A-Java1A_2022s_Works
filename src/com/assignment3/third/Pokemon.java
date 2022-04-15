@@ -3,14 +3,16 @@ package com.assignment3.third;
 public class Pokemon {
     private String name;
     private int hp;
+    private int tempHp;
     private int atk;
     private int level;
     private int speed;
     private int rateAtk;
     private int rateHp;
     Skill skill;
+
     public void learnSkill(Skill skill) {
-        this.skill=skill;
+        this.skill = skill;
     }
 
     public Pokemon(String name, int hp, int atk, Skill skills, int level, int speed, int rateAtk, int rateHp) {
@@ -22,6 +24,7 @@ public class Pokemon {
         this.speed = speed;
         this.rateAtk = rateAtk;
         this.rateHp = rateHp;
+        tempHp=hp;
     }
 
     public void setHp(int hp) {
@@ -53,5 +56,12 @@ public class Pokemon {
         int oldAtk = getAtk();
         setAtk(rateAtk * up + oldAtk);
         setHp(rateHp * up + oldHp);
+        tempHp=rateHp * up + oldHp;
+    }
+    public void setTempHp(int tempHp){
+        this.tempHp=tempHp;
+    }
+    public int getTempHp(){
+        return tempHp;
     }
 }
