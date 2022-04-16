@@ -1,4 +1,4 @@
-package com.assignment3.third;
+package com.assignment3.fianl110.danganronpa.pokemonA;
 
 import java.util.ArrayList;
 import java.util.Random;

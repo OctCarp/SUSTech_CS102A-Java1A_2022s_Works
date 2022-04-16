@@ -1,4 +1,4 @@
-package com.assignment3.demos;
+package com.assignment3.fianl110.danganronpa;
 
 import java.util.Scanner;
 

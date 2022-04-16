@@ -1,4 +1,4 @@
-package com.assignment3.third;
+package com.assignment3.fianl110.danganronpa.pokemonA;
 
 public class Demo {
     public static void main(String[] args) {

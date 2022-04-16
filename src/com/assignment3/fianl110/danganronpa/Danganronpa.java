@@ -1,9 +1,112 @@
-package com.assignment3.danganronpa;
+package com.assignment3.fianl110.danganronpa;
 
 import java.io.*;
 import java.util.*;
 
-public class A {
+public class Danganronpa {
+    static ArrayList<String> stm = new ArrayList<>();
+    static boolean wasNegative = false;
+    static long matchNum = 0;
+    static long influenceGauge;
+    static long sumM=0;
+    static int aMax=0;
+    static long sumB=0;
+    static HashMap<String, Integer> stmMap = new HashMap<>();
+    static QReader in = new QReader();
+    static QWriter out = new QWriter();
+
+    public static void main(String[] args) {
+        long n = in.nextLong();
+        influenceGauge = in.nextLong();
+        for (int i = 0; i < n; i++) {
+            long m = in.nextLong();
+            sumM += m;
+        }
+        for (int i = 0; i < n ; i++) {
+            int type = in.nextInt();
+            if (type == 1) {
+                String s = in.next();
+                typeOne(s);
+                if(counterStatements()>aMax){
+                    aMax=counterStatements();
+                }
+            }
+            if (type == 2) {
+                String s = in.next();
+                typeTwo(s);
+                out.println(counterStatements());
+            }
+            if (type == 3) {
+                typeThree();
+            }
+        }
+        int judge=Integer.signum(aMax)*Long.signum(sumM);
+        if(wasNegative||judge<0){
+            out.println("Fail");
+        }else {out.println("Qi Fei");}
+        out.close();
+    }
+
+    public static int counterStatements() {
+        if (stm == null) {
+            return 0;
+        } else {
+            return getMedian();
+        }
+    }
+
+    public static void typeOne(String s) {
+        stm.add(s);
+        if (stmMap.containsKey(s)) {
+            int i = stmMap.get(s);
+            stmMap.replace(s, i + 1);
+        } else {
+            stmMap.put(s, 1);
+        }
+    }
+
+    public static void typeTwo(String tb) {
+        influenceGauge++;
+        if (stm != null) {
+            long L = getMedian();
+            if (influenceGauge < L) {
+                influenceGauge -= stm.size();
+            }
+            if (influenceGauge < 0) {
+                wasNegative = true;
+            }
+        }
+
+        if (stmMap.containsKey(tb)) {
+            matchNum += stmMap.get(tb);
+        }
+    }
+
+    public static void typeThree() {
+        out.println(matchNum);
+    }
+
+    public static int getMedian() {
+        MaxHeap heap1 = new MaxHeap();
+        MinHeap heap2 = new MinHeap();
+        for (int i = 0; i < stm.size(); i++) {
+            int k = stm.get(i).length();
+            if (heap1.size() == 0 || heap1.getMax() > k) {
+                heap1.push(k);
+                if (heap1.size() > heap2.size() + 1) {
+                    heap2.push(heap1.getMax());
+                    heap1.pop();
+                }
+            } else {
+                heap2.push(k);
+                if (heap1.size() < heap2.size()) {
+                    heap1.push(heap2.getMin());
+                    heap2.pop();
+                }
+            }
+        }
+        return heap1.getMax();
+    }
 }
 
 class QReader {

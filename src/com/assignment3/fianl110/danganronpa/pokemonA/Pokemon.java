@@ -1,4 +1,4 @@
-package com.assignment3.third;
+package com.assignment3.fianl110.danganronpa.pokemonA;
 
 public class Pokemon {
     private String name;
