@@ -16,6 +16,10 @@ public class Store {
         income = 0;
     }
 
+    public void refundIncome(Product product) {
+        this.income -= product.getPrice();
+    }
+
     public Store(String name, ArrayList<Product> productList, float income) {
         cnt++;
         id = cnt;
