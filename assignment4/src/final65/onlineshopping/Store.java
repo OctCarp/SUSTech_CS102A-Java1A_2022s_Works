@@ -1,4 +1,4 @@
-package demos.onlineshopping;
+package final65.onlineshopping;
 
 import java.util.ArrayList;
 
@@ -6,7 +6,7 @@ public class Store {
     private static int cnt = 0;
     private int id;
     private String name;
-    private ArrayList<Product> productList;
+    private ArrayList<Product> productList=new ArrayList<>();
     private float income;
 
     public Store(String name) {

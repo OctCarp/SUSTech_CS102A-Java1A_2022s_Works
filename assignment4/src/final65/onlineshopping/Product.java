@@ -1,4 +1,4 @@
-package demos.onlineshopping;
+package final65.onlineshopping;
 
 import java.util.ArrayList;
 
@@ -8,7 +8,7 @@ public class Product {
     private int id;
     private String name;
     private float price;
-    private ArrayList<Integer> ratings;
+    private ArrayList<Integer> ratings = new ArrayList<>();
 
     public int getId() {
         return id;
@@ -39,11 +39,15 @@ public class Product {
     }
 
     public float getAvgRating() {
-        int sum = 0;
-        for (int i = 0; i < ratings.size(); i++) {
-            sum += ratings.get(i);
+        if (ratings.size() == 0) {
+            return 0;
+        } else {
+            int sum = 0;
+            for (int i = 0; i < ratings.size(); i++) {
+                sum += ratings.get(i);
+            }
+            return (float) sum / ratings.size();
         }
-        return sum / ratings.size();
     }
 
     public String toString() {

@@ -1,17 +1,17 @@
-package demos.onlineshopping;
+package final65.onlineshopping;
 
 import java.util.ArrayList;
-import java.util.Map;
+import java.util.HashMap;
 
 public class Customer {
     private static int cnt = 0;
     private int id;
     private String name;
-    private ArrayList<Product> shoppingCart;
+    private ArrayList<Product> shoppingCart = new ArrayList<>();
     private ArrayList<Product> rattingCart = new ArrayList<>();
     private ArrayList<Product> priceCart = new ArrayList<>();
     private float wallet;
-    Map<Product, Store> link;
+    HashMap<Product, Store> link=new HashMap<>();
 
     public Customer(String name, float wallet) {
         cnt++;
@@ -35,10 +35,10 @@ public class Customer {
 
     public boolean purchaseProduct(Store store, Product product) {
         if (store.hasProduct(product) && product.getPrice() <= wallet) {
-            updateWallet(product.getPrice());
+            updateWallet(-product.getPrice());
             shoppingCart.add(product);
-            store.removeProduct(product);
             link.put(product, store);
+            store.transact(product, 0);
             return true;
         } else {
             return false;
@@ -53,7 +53,7 @@ public class Customer {
 
     public void sortByRatting() {
         priceCart = shoppingCart;
-        priceCart.stream().sorted((p1, p2) -> ((Float) p1.getRatings()).compareTo(p2.getRatings()))
+        priceCart.stream().sorted((p1, p2) -> ((Float) p1.getAvgRating()).compareTo(p2.getAvgRating()))
                 .forEach(product -> System.out.println(product));
     }
 
@@ -64,7 +64,15 @@ public class Customer {
     }
 
     public void viewShoppingCart(SortBy sortMethod) {
-
+        if(sortMethod==SortBy.PurchaseTime){
+            sortByTime();
+        }
+        if(sortMethod==SortBy.Price){
+            sortByPrice();
+        }
+        if(sortMethod==SortBy.Rating){
+            sortByRatting();
+        }
     }
 
     public boolean refundProduct(Product product) {
