@@ -3,7 +3,7 @@ package com.demos;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class A5 {
+public class Q5 {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
         long r = input.nextLong();

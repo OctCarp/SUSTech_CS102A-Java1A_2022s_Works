@@ -2,7 +2,7 @@ package com.demos;
 
 import java.util.Scanner;
 
-public class A1Note {
+public class Q1Note {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
         int terms = input.nextInt();//输入项数

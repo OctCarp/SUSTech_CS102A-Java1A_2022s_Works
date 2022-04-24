@@ -2,7 +2,7 @@ package com.Assignments1.Demo;
 
 import java.util.Scanner;
 
-public class A33 {
+public class Q33 {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
         String time1 = input.nextLine();

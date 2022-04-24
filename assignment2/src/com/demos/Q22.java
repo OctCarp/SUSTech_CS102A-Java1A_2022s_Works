@@ -2,7 +2,7 @@ package com.demos;
 
 import java.util.Scanner;
 
-public class A22 {
+public class Q22 {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
         int lineNumber = input.nextInt();

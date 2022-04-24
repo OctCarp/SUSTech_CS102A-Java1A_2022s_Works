@@ -4,7 +4,7 @@ package com.demos;
 
 import java.util.Scanner;
 
-public class A4Note {
+public class Q4Note {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
         int n = input.nextInt();//n个python形
