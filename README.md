@@ -1,4 +1,4 @@
-# cs102a
+# CS102A-MyAnswer
 ## !!!Please note: Copying it for homework without asking me is not allowed, it could be considered plagiarism!!!
 ### The code I submitted for my exercise and assignments of CS102A 2022 Spring
 
