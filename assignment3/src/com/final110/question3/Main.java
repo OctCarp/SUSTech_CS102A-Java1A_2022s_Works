@@ -1,4 +1,4 @@
-package com.final110.pokemonA;
+package com.final110.question3;
 
 public class Main {
     public static void main(String[] args) {

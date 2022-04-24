@@ -1,4 +1,4 @@
-package com.final110.pokemonA;
+package com.final110.question3;
 
 public class Battle {
     public static Player tatakai(Player p1, Player p2) {

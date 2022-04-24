@@ -2,7 +2,7 @@ package com.final400;
 
 import java.util.Scanner;
 
-public class A2 {
+public class A2Q2 {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
         String lineNumberString = input.nextLine();

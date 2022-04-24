@@ -2,7 +2,7 @@ package com.Assignments1.Final;
 
 import java.util.Scanner;
 
-public class A4 {
+public class A4Q4 {
     public static void main(String[] args) {
         boolean legal = true;
         String test1 = "";
