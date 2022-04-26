@@ -1,14 +1,14 @@
 
 import java.awt.Color;
 
-public enum CircleColor {
+public enum ShapeColor {
 	GREEN("The circle is in the Screen", Color.GREEN), RED("The circle is not in the Screen",
 			Color.RED), GRAY("Haven't tested", Color.GRAY);
 
 	private String desc;// The description of instance
 	private Color color;// The color of instance
 
-	CircleColor(String desc, Color color) {
+	ShapeColor(String desc, Color color) {
 		this.desc = desc;
 		this.color = color;
 	}
