@@ -11,5 +11,8 @@ public interface ChessGame {
     String getChessboardGraph();
 
     String getCapturedChess(ChessColor player);
+    boolean moveChess(int sourceX, int sourceY, int targetX, int targetY);
+
+    List<ChessboardPoint> getCanMovePoints(ChessboardPoint source);
 
 }

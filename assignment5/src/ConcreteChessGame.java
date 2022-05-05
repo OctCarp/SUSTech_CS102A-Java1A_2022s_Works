@@ -7,11 +7,38 @@ public class ConcreteChessGame implements ChessGame {
 
     private ChessColor currentPlayer = ChessColor.WHITE;
 
+    public List<ChessboardPoint> getCanMovePoints(ChessboardPoint source) {
+        ChessComponent chess = getChess(source.getX(), source.getY());
+        chess.setChessboard(this.chessComponents);
+        chess.setSource(new ChessboardPoint(source.getX(), source.getY()));
+        List<ChessboardPoint> canMovePoints = chess.canMoveTo();
+        return canMovePoints;
+    }
+
+    public boolean moveChess(int sourceX, int sourceY, int targetX, int targetY) {
+        ChessComponent chess=chessComponents[sourceX][sourceY];
+        if(currentPlayer!=chess.getChessColor()){
+            return false;
+        }
+        List<ChessboardPoint> points = getCanMovePoints(new ChessboardPoint(sourceX, sourceY));
+        ChessboardPoint target = new ChessboardPoint(targetX, targetY);
+        for (int i = 0; i < points.size(); i++) {
+            ChessboardPoint point = points.get(i);
+            if (point.getX() == targetX && point.getY() == targetY) {
+                currentPlayer=currentPlayer==ChessColor.WHITE?ChessColor.BLACK:ChessColor.WHITE;
+                return true;
+            }
+        }
+        return false;
+    }
+
     public void loadChessGame(List<String> chessboard) {
         for (int i = 0; i < 8; i++) {
             for (int j = 0; j < 8; j++) {
                 char c = chessboard.get(i).charAt(j);
-                chessComponents[i][j] = type(c);
+                ChessComponent chess = type(c);
+                chess.setSource(new ChessboardPoint(i, j));
+                chessComponents[i][j] = chess;
             }
         }
         char player = chessboard.get(8).charAt(0);
@@ -57,22 +84,22 @@ public class ConcreteChessGame implements ChessGame {
                 }
             }
             if (k != 0) {
-                sb.append(String.format("K %d\n",k));
+                sb.append(String.format("K %d\n", k));
             }
             if (q != 0) {
-                sb.append(String.format("Q %d\n",q));
+                sb.append(String.format("Q %d\n", q));
             }
             if (r != 0) {
-                sb.append(String.format("R %d\n",r));
+                sb.append(String.format("R %d\n", r));
             }
             if (b != 0) {
-                sb.append(String.format("B %d\n",b));
+                sb.append(String.format("B %d\n", b));
             }
             if (n != 0) {
-                sb.append(String.format("N %d\n",n));
+                sb.append(String.format("N %d\n", n));
             }
             if (p != 0) {
-                sb.append(String.format("P %d\n",p));
+                sb.append(String.format("P %d\n", p));
             }
         } else {
             for (int i = 0; i < 8; i++) {
@@ -102,24 +129,24 @@ public class ConcreteChessGame implements ChessGame {
                 }
             }
             if (k != 0) {
-                sb.append(String.format("k %d\n",k));
+                sb.append(String.format("k %d\n", k));
             }
             if (q != 0) {
-                sb.append(String.format("q %d\n",q));
+                sb.append(String.format("q %d\n", q));
             }
             if (r != 0) {
-                sb.append(String.format("r %d\n",r));
+                sb.append(String.format("r %d\n", r));
             }
             if (b != 0) {
-                sb.append(String.format("b %d\n",b));
+                sb.append(String.format("b %d\n", b));
             }
             if (n != 0) {
-                sb.append(String.format("n %d\n",n));
+                sb.append(String.format("n %d\n", n));
             }
             if (p != 0) {
-                sb.append(String.format("p %d\n",p));
+                sb.append(String.format("p %d\n", p));
             }
-            }
+        }
         return sb.toString();
     }
 
@@ -169,4 +196,7 @@ public class ConcreteChessGame implements ChessGame {
         return this.currentPlayer;
     }
 
+    public ChessComponent[][] getChessComponents() {
+        return chessComponents;
+    }
 }
