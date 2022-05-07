@@ -1,10 +1,7 @@
 import java.util.List;
 
 public class ConcreteChessGame implements ChessGame {
-
-
     private ChessComponent[][] chessComponents = new ChessComponent[8][8];
-
     private ChessColor currentPlayer = ChessColor.WHITE;
 
     public List<ChessboardPoint> getCanMovePoints(ChessboardPoint source) {
@@ -16,8 +13,8 @@ public class ConcreteChessGame implements ChessGame {
     }
 
     public boolean moveChess(int sourceX, int sourceY, int targetX, int targetY) {
-        ChessComponent chess=chessComponents[sourceX][sourceY];
-        if(currentPlayer!=chess.getChessColor()){
+        ChessComponent chess = chessComponents[sourceX][sourceY];
+        if (currentPlayer != chess.getChessColor()) {
             return false;
         }
         List<ChessboardPoint> points = getCanMovePoints(new ChessboardPoint(sourceX, sourceY));
@@ -25,7 +22,7 @@ public class ConcreteChessGame implements ChessGame {
         for (int i = 0; i < points.size(); i++) {
             ChessboardPoint point = points.get(i);
             if (point.getX() == targetX && point.getY() == targetY) {
-                currentPlayer=currentPlayer==ChessColor.WHITE?ChessColor.BLACK:ChessColor.WHITE;
+                currentPlayer = currentPlayer == ChessColor.WHITE ? ChessColor.BLACK : ChessColor.WHITE;
                 return true;
             }
         }

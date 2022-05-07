@@ -26,5 +26,4 @@ public class ChessboardPoint {
             return null;
         } else return new ChessboardPoint(a, b);
     }
-
 }

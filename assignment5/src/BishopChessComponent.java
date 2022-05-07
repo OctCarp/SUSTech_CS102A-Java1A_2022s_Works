@@ -32,7 +32,7 @@ public class BishopChessComponent extends ChessComponent {
         int x = source.getX(), y = source.getY();
         for (int i = 0; i < 8; i++) {
             for (int j = 0; j < 8; j++) {
-                boolean line=true;
+                boolean line = true;
                 if (x - i == y - j) {
                     int initRow = Math.min(x, i);
                     int initCol = Math.min(y, j);

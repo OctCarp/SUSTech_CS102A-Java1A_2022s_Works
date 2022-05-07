@@ -15,6 +15,7 @@ public class EmptySlotComponent extends ChessComponent {
     public void setChessboard(ChessComponent[][] chessboard) {
         this.chessboard = chessboard;
     }
+
     public EmptySlotComponent(ChessColor color) {
         super(color);
         this.name = '_';
