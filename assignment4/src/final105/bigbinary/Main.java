@@ -1,6 +1,6 @@
-package final105.onlineshopping;
+package final105.bigbinary;
 
-import final105.onlineshopping.BigBinary;
+import final105.bigbinary.BigBinary;
 
 public class Main {
     public static void main(String[] args) {

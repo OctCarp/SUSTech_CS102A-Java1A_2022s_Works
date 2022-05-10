@@ -1,4 +1,4 @@
-package final105.onlineshopping;
+package final105.bigbinary;
 
 public class BigBinary {
     int[] bits;

@@ -42,7 +42,7 @@ public class TestBigBinaryLocal {
     }
 
     private static void checkExist() throws Throwable {
-        bigBinaryClazz = Class.forName("final105.onlineshopping.BigBinary");
+        bigBinaryClazz = Class.forName("final105.bigbinary.BigBinary");
         onlyConstructor = bigBinaryClazz.getDeclaredConstructor(int[].class, boolean.class);
         toStringMethod = bigBinaryClazz.getDeclaredMethod("toString");
 
