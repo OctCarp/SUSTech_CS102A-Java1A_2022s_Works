@@ -8,4 +8,8 @@ It may be the first version that was all accept, but not always the best version
 * **assignment\demos is my attempts and tests**  
 It contains some immature ideas, unoptimized method, and tests for new syntax.
 
-test1
+Assignment1 120/120
+Assignment2 100/100
+Assignment3 110/110
+Assignment1 105/120 15 for BigBinary time method
+Assignment1 100/100
