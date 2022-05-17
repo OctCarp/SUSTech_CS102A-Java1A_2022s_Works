@@ -40,7 +40,7 @@ public class PawnChessComponent extends ChessComponent {
                                 move = false;
                             }
                         } else if (i == 3) {
-                            if (!(chessboard[2][j] instanceof EmptySlotComponent) &&
+                            if (!(chessboard[2][j] instanceof EmptySlotComponent) ||
                                     !(chessboard[3][j] instanceof EmptySlotComponent)) {
                                 move = false;
                             }
@@ -61,7 +61,7 @@ public class PawnChessComponent extends ChessComponent {
                                 move = false;
                             }
                         } else if (i == 4) {
-                            if (!(chessboard[5][j] instanceof EmptySlotComponent) &&
+                            if (!(chessboard[5][j] instanceof EmptySlotComponent) ||
                                     !(chessboard[4][j] instanceof EmptySlotComponent)) {
                                 move = false;
                             }
