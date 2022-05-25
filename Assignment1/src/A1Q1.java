@@ -1,5 +1,3 @@
-package com.Assignments1.Final;
-
 import java.util.Scanner;
 
 public class A1Q1 {

@@ -1,8 +1,6 @@
-package com.Assignments1.Final;
-
 import java.util.Scanner;
 
-public class A3 {
+public class A1Q3 {
     public static void main(String[] args) {
         try {
             Scanner input = new Scanner(System.in);

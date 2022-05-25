@@ -1,8 +1,6 @@
-package com.Assignments1.Final;
-
 import java.util.Scanner;
 
-public class A2Q2 {
+public class A1Q2 {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);//输入数据
         long id = input.nextLong();//输入8位学生id
