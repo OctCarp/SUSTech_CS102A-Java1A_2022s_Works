@@ -1,7 +1,7 @@
-import final105.onlineshopping.Customer;
-import final105.onlineshopping.Product;
-import final105.onlineshopping.SortBy;
-import final105.onlineshopping.Store;
+import A4Q2.Customer;
+import A4Q2.Product;
+import A4Q2.SortBy;
+import A4Q2.Store;
 import org.junit.jupiter.api.MethodOrderer;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestMethodOrder;

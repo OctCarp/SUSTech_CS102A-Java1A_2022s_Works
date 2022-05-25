@@ -1,4 +1,4 @@
-package final105.bigbinary;
+package A4Q1;
 
 public class BigBinary {
     int[] bits;

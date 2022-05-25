@@ -1,8 +1,6 @@
-package final105.bigbinary;
+package A4Q1;
 
-import final105.bigbinary.BigBinary;
-
-public class Main {
+public class A4Q1Main {
     public static void main(String[] args) {
         int[] b1 = {1,1,0,1,1,1,1,1,1,0,0,1,1,0,0};
         int[] b2 = {0,1};
