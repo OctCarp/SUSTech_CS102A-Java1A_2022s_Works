@@ -1,6 +1,6 @@
-package com.final110.question3;
+package A3Q3;
 
-public class Main {
+public class A2Q3Main {
     public static void main(String[] args) {
         Player player1 = new Player(new Mail("1@mail.sustech.edu.cn"), new
                 PhoneNumber("1"), "1");

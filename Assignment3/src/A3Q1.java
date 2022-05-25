@@ -1,8 +1,6 @@
-package com.final110;
-
 import java.util.Scanner;
 
-public class RoomEscape {
+public class A3Q1 {
     public static void main(String[] args) {
         Scanner input=new Scanner(System.in);
         String fCipher= input.nextLine();

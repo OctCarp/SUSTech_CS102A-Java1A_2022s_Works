@@ -1,4 +1,4 @@
-package com.final110.question3;
+package A3Q3;
 
 import java.util.ArrayList;
 import java.util.Random;

@@ -1,9 +1,7 @@
-package com.final110;
-
 import java.io.*;
 import java.util.*;
 
-public class Danganronpa {
+public class A3Q2 {
     static ArrayList<String> stm = new ArrayList<>();
     static boolean wasNegative = false;
     static long matchNum = 0;
