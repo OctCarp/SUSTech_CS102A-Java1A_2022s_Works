@@ -1,6 +1,6 @@
 //友人z受VMware图标启发，灵感乍现
 //我想称为无限python爬楼梯形
-package com.demos;
+package A2;
 
 import java.util.Scanner;
 

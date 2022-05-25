@@ -1,4 +1,4 @@
-package com.demos;
+package A2;
 
 public class Q40 {
     public static void main(String[] args) {
