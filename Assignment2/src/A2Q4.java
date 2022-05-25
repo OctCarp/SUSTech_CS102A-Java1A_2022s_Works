@@ -1,5 +1,3 @@
-package com.final400;
-
 import java.util.Scanner;
 
 public class A2Q4 {
