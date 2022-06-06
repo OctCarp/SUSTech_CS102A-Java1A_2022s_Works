@@ -1,5 +1,3 @@
-package com.week7;
-
 import java.util.ArrayList;
 
 public class FoodTest {

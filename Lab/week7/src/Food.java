@@ -1,5 +1,3 @@
-package com.week7;
-
 public class Food {
     private int id;
     private String name;
